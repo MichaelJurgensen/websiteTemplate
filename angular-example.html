@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html ng-app = "directory">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.JS Example</title>
+    
+    <script type = "text/javascript" src="jquery-1.11.1.min.js"></script>
+	
+	  <script src="http://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.3/angular.min.js"></script>
+    <script type = "text/javascript" src = "js/app.js"></script>
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+  <body ng-controller = "SearchController as searchCtrl">
+    <header>
+      <a href="index.html" id="logo">
+        <h1>Michael Jurgensen</h1>
+        <h2>Designer</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="photoviewer.html">Photo-viewer</a></li>
+          <li><a href="angular-example.html"  class="selected">Angular.js</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div id="wrapper">
+      <section>
+        <h3>Angular Tutorial</h3>
+        <h5>(Use Firefox if this page is not working)</h5>
+        <form>
+        	<p>
+            	<label for="txt-searchInfo">Search the directory:</label>
+        		<input type = "text" id = "txt-searchInfo" ng-model = "searchText" ng-click = "clearProfile()">
+                <select id="sel_filter" ng-click="changeNumberOfEntries()">
+                	<option value="10">Show all Entries</option>
+                    <option value="3">Show 3 Entries</option>
+                    <option value="5">Show 5 Entries</option>
+                </select>
+           	</p>
+        </form>
+      </section>
+      <section>
+        <!-- Search Results -->
+		<search-info class = "search-info">
+				
+		</search-info>
+        
+        <!-- Profile Information -->
+        <profile-info class = "profile-info" ng-show = "profile.name" ng-hide = "{{!$.isEmptyObject(profile)}}">
+        	
+        </profile-info>
+      </section>
+      <footer>
+        <p>&copy; 2014 Michael Jurgensen</p>
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+<div ng-repeat="entry in directory | limitTo: numberOfResults | filter:searchText ">
+	<p ng-click= "viewProfile(entry)" class = "borderline">
+    	<img ng-show = "numberOfResults > 0" data-ng-src="{{entry.image}}">
+        {{entry.name}}
+   	</p>
+</div>
+
+
