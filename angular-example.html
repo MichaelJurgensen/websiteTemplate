@@ -29,14 +29,13 @@
     </header>
     <div id="wrapper">
       <section>
-        <h3>Angular Tutorial</h3>
-        <h5>(Use Firefox if this page is not working)</h5>
+        <h3>Angular Tutorial (Use Firefox if this page is not working)</h3>
         <form>
         	<p>
             	<label for="txt-searchInfo">Search the directory:</label>
         		<input type = "text" id = "txt-searchInfo" ng-model = "searchText" ng-click = "clearProfile()">
                 <select id="sel_filter" ng-click="changeNumberOfEntries()">
-                	<option value="10">Show all Entries</option>
+                	<option value="10">Show all</option>
                     <option value="3">Show 3 Entries</option>
                     <option value="5">Show 5 Entries</option>
                 </select>
@@ -45,7 +44,7 @@
       </section>
       <section>
         <!-- Search Results -->
-		<search-info class = "search-info">
+		<search-info class = "search-info" ng-model = "directory.name">
 				
 		</search-info>
         
