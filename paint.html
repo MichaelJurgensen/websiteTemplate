@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8">
+	<title>Simple Drawing Application</title>
+	<link rel="stylesheet" href="css/normalize.css">
+    <link href='http://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400italic,700italic,400,700,800' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+      <a href="index.html" id="logo">
+        <h1>Michael Jurgensen</h1>
+        <h2>Designer</h2>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="photoviewer.html">Photo-viewer</a></li>
+          <li><a href="paint.html" class="selected">Paint</a></li>
+          <li><a href="angular-example.html">Angular.js</a></li>
+          <li><a href="index.html">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+	<canvas	width="600" height="400"></canvas>
+	<div class="controls">
+		<ul id = "colorList">
+			<li class="red selected"></li>
+			<li class="blue"></li>
+			<li class="yellow"></li>
+		</ul>
+		<button id="revealColorSelect">New Color</button>
+		<div id="colorSelect">
+			<span id="newColor"></span>
+			<div class="sliders">
+				<p>
+					<label for="red">Red</label>
+					<input id="red" name="red" type="range" min=0 max=255 value=0>
+				</p>
+				<p>
+					<label for="green">Green</label>
+					<input id="green" name="green" type="range" min=0 max=255 value=0>
+				</p>
+				<p>
+					<label for="blue">Blue</label>
+					<input id="blue" name="blue" type="range" min=0 max=255 value=0>
+				</p>
+			</div>
+			<div>
+			<button id="addNewColor">Add Color</button>
+			</div>
+		</div>
+	</div>
+	<footer style = "position: static">
+        <p>&copy; 2014 Michael Jurgensen</p>
+      </footer>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/paint.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
+
